@@ -1,8 +1,6 @@
 import Foundation
-import UIKit
 
 class Utilities {
-    
     static func printAllFontNames() {
         for family in UIFont.familyNames.sorted() {
             let names = UIFont.fontNames(forFamilyName: family)
