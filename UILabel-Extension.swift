@@ -2,6 +2,11 @@ import Foundation
 import UIKit
 
 extension UILabel {
+    
+    /**
+    Calculates the font-size of a label after it has been resized during runtime
+     - returns: The current font-size as CGFloat
+    */
     func adjustedFontSizeForLabel() -> CGFloat {
         let text: NSMutableAttributedString = NSMutableAttributedString(attributedString: self.attributedText!)
         text.setAttributes([NSAttributedString.Key.font: self.font], range: NSMakeRange(0, text.length))

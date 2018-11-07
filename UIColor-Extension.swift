@@ -1,6 +1,11 @@
 import UIKit
 
 extension UIColor {
+    
+    /**
+     Initializes a color from a hex-key. Returns a grey color if a faulty input is set
+     - parameter hex: The color as hex-string. Must have the format `"FFFFFF"` or `"#FFFFFF"`
+     */
     private convenience init(hex: String) {
         var colorString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
@@ -9,7 +14,7 @@ extension UIColor {
         }
         
         if colorString.count != 6 {
-            cString = "848484"
+            colorString = "848484"
         }
         
         var rgbValue: UInt32 = 0
