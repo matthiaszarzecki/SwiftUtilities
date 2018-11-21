@@ -23,4 +23,16 @@ class Utilities {
         let screenSizes = [heightIPhoneXr, heightIPhoneXsAndX, heightIPhoneXsMax]
         return screenSizes.contains(UIScreen.main.nativeBounds.height)
     }
+
+    /**
+     Takes a percentage-string formatted `"60%"` and turns it into a percentage-double `0.6`
+     - parameter capacity: A String describing a percentage, formatted `"60%"`
+     - returns: A Double describing a percentag, e.g. `0.6`
+     */
+    static func getPercentageDoubleFromPercentageString(_ capacity: String) -> Double {
+        let numberWithoutPercentagePoint = capacity.dropLast()
+        let capacityAsDouble = Double(numberWithoutPercentagePoint)
+        let capacityAsDoublePercentage = capacityAsDouble! / 100
+        return capacityAsDoublePercentage
+    }
 }
