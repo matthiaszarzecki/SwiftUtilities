@@ -27,7 +27,7 @@ class Utilities {
     /**
      Takes a percentage-string formatted `"60%"` and turns it into a percentage-double `0.6`
      - parameter capacity: A String describing a percentage, formatted `"60%"`
-     - returns: A Double describing a percentag, e.g. `0.6`
+     - returns: A Double describing a percentage, e.g. `0.6`
      */
     static func getPercentageDoubleFromPercentageString(_ capacity: String) -> Double {
         let numberWithoutPercentagePoint = capacity.dropLast()
