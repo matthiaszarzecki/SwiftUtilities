@@ -35,4 +35,17 @@ class Utilities {
         let capacityAsDoublePercentage = capacityAsDouble! / 100
         return capacityAsDoublePercentage
     }
+    
+    /**
+     Calculates the height a label would need to have to fit the specified text in the specified font and size
+     */
+    static func getHeightForView(text: String, font: UIFont, width: CGFloat) -> CGFloat {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = font
+        label.text = text
+        label.sizeToFit()
+        return label.frame.height
+    }
 }
