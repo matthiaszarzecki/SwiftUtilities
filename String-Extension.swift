@@ -21,4 +21,11 @@ extension String {
     }
     return randomString
   }
+  
+  /**
+   Checks if a string contains another string regardless of case.
+   */
+  func containsIgnoringCase(_ input: String) -> Bool {
+    return self.range(of: input, options: .caseInsensitive) != nil
+  }
 }
