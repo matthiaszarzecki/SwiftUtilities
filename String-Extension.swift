@@ -1,10 +1,8 @@
 extension String {
-  /**
-   Creates and returns a random string filled with letters and numbers.
-   If a length <= 0 is specified an empty string is returned.
-   - Parameter withLength: The length of the string. Default is 6 characters
-   - Returns: A Random string of length *withLength*
-   */
+  /// Creates and returns a random string filled with letters and numbers.
+  /// If a length <= 0 is specified an empty string is returned.
+  /// - Parameter withLength: The length of the string. Default is 6 characters
+  /// - Returns: A Random string of length *withLength*
   static func random(withLength length: Int = 6) -> String {
     guard length > 0 else {
       return ""

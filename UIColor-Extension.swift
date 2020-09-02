@@ -1,8 +1,6 @@
 extension UIColor {
-  /**
-   Initializes a color from a hex-key. Returns a grey color if a faulty input is set
-   - parameter hex: The color as hex-string. Must have the format `"FFFFFF"` or `"#FFFFFF"`
-   */
+  /// Initializes a color from a hex-key. Returns a grey color if a faulty input is set
+  /// - parameter hex: The color as hex-string. Must have the format `"FFFFFF"` or `"#FFFFFF"`
   private convenience init(hex: String) {
     var colorString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
