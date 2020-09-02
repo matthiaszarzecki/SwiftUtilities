@@ -2,9 +2,7 @@ import Foundation
 import UIKit
 
 extension UITextView {
-  /**
-   *  Returns a CGRect with the correct size to fit the contents.
-   */
+  /// Returns a CGRect with the correct size to fit the contents.
   func getFittingSizeAsCGRect() -> CGRect {
     let contentSize = self.sizeThatFits(self.bounds.size)
     let viewOrigin = self.frame.origin
@@ -12,9 +10,7 @@ extension UITextView {
     return newViewRect
   }
 
-  /**
-   *  Returns a CGFloat with the correct height to fit the contents.
-   */
+  /// Returns a CGFloat with the correct height to fit the contents.
   func getFittingHeight() -> CGFloat {
     let contentSize = self.sizeThatFits(self.bounds.size)
     return contentSize.height
