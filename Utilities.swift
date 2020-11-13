@@ -1,3 +1,5 @@
+import SwiftUI
+
 class Utilities {
   /// Prints out the names of all available fonts
   static func printAllFontNames() {
@@ -38,5 +40,22 @@ class Utilities {
     label.text = text
     label.sizeToFit()
     return label.frame.height
+  }
+
+  // Produces a random color-shade from a preset base.
+  static func randomDebugColor() -> Color {
+    let hue = 0.63
+    let saturation = 0.8
+    let brightness = 0.8
+    
+    let randomRange = 0.3
+    
+    let randomColor = Color.init(
+      hue: hue + Double.random(max: randomRange),
+      saturation: saturation + Double.random(max: randomRange),
+      brightness: brightness + Double.random(max: randomRange)
+    )
+
+    return randomColor
   }
 }
