@@ -11,4 +11,12 @@ extension Double {
   static var random: Double {
     return Double(arc4random()) / 0xFFFFFFFF
   }
+
+  /// Returns a random double between 0 and max.
+  ///
+  /// - Parameter max:  The maximum number that will be returned. Can be bigger than 1.0.
+  /// - Returns:        Returns a random double point number between 0.0 and max.
+  static func random(max: Double) -> Double {
+    return Double.random * max
+  }
 }
